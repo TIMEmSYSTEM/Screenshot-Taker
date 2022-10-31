@@ -1,6 +1,6 @@
 const core = require("@actions/core");
 const puppeteer = require('puppeteer');
-const downloadBrowser = require('downloadBrowser');
+const {downloadBrowser} = require('puppeteer/internal/node/install.js');
 const exec = require('child_process').exec;
 
 const url = core.getInput('url', {required:true});
