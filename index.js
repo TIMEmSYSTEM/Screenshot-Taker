@@ -1,6 +1,7 @@
 const core = require("@actions/core");
 const puppeteer = require('puppeteer');
 const exec = require('child_process').exec;
+var pathToModule = require.resolve('puppeteer');
 
 const url = core.getInput('url', {required:true});
 const screenshot_name = core.getInput('screenshot_name', {required:true});
@@ -42,6 +43,8 @@ function delay(time) {
  }
 
  function setupcromium() {
+    console.log(pathToModule)
+
     exec('pwd',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
