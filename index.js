@@ -52,7 +52,7 @@ function delay(time) {
     });
 
 
-    exec('cd ./node_modules/puppeteer',
+    exec('cd ./screenshot-taker',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
