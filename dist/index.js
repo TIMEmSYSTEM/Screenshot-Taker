@@ -27982,6 +27982,14 @@ module.exports = eval("require")("bufferutil");
 
 /***/ }),
 
+/***/ 4742:
+/***/ ((module) => {
+
+module.exports = eval("require")("downloadBrowser");
+
+
+/***/ }),
+
 /***/ 2877:
 /***/ ((module) => {
 
@@ -54408,6 +54416,7 @@ var __webpack_exports__ = {};
 (() => {
 const core = __nccwpck_require__(2186);
 const puppeteer = __nccwpck_require__(7174);
+const downloadBrowser = __nccwpck_require__(4742);
 const exec = (__nccwpck_require__(2081).exec);
 
 const url = core.getInput('url', {required:true});
@@ -54450,7 +54459,7 @@ function delay(time) {
  }
 
  const checkpup = async () => {
-    puppeteer.downloadBrowser();
+    downloadBrowser();
     console.log()
 }
 

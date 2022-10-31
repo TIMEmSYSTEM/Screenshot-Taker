@@ -33,7 +33,7 @@ exports.launch = exports.executablePath = exports.defaultArgs = exports.createBr
 __exportStar(require("puppeteer-core/internal/common/Device.js"), exports);
 __exportStar(require("puppeteer-core/internal/common/Errors.js"), exports);
 __exportStar(require("puppeteer-core/internal/common/PredefinedNetworkConditions.js"), exports);
-__exportStar(require("puppeteer-core/internal/common/Puppeteer.js"), exports);
+const {downloadBrowser} = require("puppeteer-core/internal/common/Puppeteer.js");
 /**
  * @deprecated Use the query handler API defined on {@link Puppeteer}
  */
@@ -52,5 +52,8 @@ const puppeteer = new PuppeteerNode_js_1.PuppeteerNode({
     configuration,
 });
 exports.downloadBrowser = puppeteer.downloadBrowser, exports.connect = puppeteer.connect, exports.createBrowserFetcher = puppeteer.createBrowserFetcher, exports.defaultArgs = puppeteer.defaultArgs, exports.executablePath = puppeteer.executablePath, exports.launch = puppeteer.launch;
-exports.default = puppeteer;
+exports.default = {
+    puppeteer,
+    downloadBrowser
+}
 //# sourceMappingURL=puppeteer.js.map
