@@ -45,7 +45,7 @@ function delay(time) {
  function setupcromium() {
     console.log(pathToModule)
 
-    exec('pwd',
+    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master/dist',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
@@ -54,8 +54,7 @@ function delay(time) {
         }
     });
 
-
-    exec('cd ./screenshot-taker',
+    exec('ls',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
