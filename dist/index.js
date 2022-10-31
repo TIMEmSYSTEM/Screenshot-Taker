@@ -54409,7 +54409,6 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(2186);
 const puppeteer = __nccwpck_require__(7174);
 const exec = (__nccwpck_require__(2081).exec);
-var pathToModule = __nccwpck_require__.ab + "puppeteer.js";
 
 const url = core.getInput('url', {required:true});
 const screenshot_name = core.getInput('screenshot_name', {required:true});
@@ -54451,9 +54450,16 @@ function delay(time) {
  }
 
  function setupcromium() {
-    console.log(__nccwpck_require__.ab + "puppeteer.js")
-
     exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master',
+    function (error, stdout, stderr) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+             console.log('exec error: ' + error);
+        }
+    });
+
+    exec('ls',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
