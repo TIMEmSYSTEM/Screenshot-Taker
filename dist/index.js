@@ -54465,6 +54465,8 @@ function delay(time) {
         }
     });
  }
+
+ checkpup();
 })();
 
 module.exports = __webpack_exports__;

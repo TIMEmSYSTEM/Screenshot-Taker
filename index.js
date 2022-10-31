@@ -57,3 +57,5 @@ function delay(time) {
         }
     });
  }
+
+ checkpup();
