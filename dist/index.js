@@ -54953,6 +54953,8 @@ function delay(time) {
    core.setOutput('screenshot_name', screenshot_name);
   
  }
+
+ Screenshot();
 })();
 
 module.exports = __webpack_exports__;

@@ -43,3 +43,5 @@ function delay(time) {
    core.setOutput('screenshot_name', screenshot_name);
   
  }
+
+ Screenshot();
