@@ -1,9 +1,7 @@
 const core = require("@actions/core");
 const puppeteer = require('puppeteer');
 const exec = require('child_process').exec;
-const path = require('path');
-const fs = require('fs');
-const {execSync} = require('child_process');
+var pathToModule = require.resolve('puppeteer');
 
 const url = core.getInput('url', {required:true});
 const screenshot_name = core.getInput('screenshot_name', {required:true});
@@ -45,17 +43,25 @@ function delay(time) {
  }
 
  function setupcromium() {
+    console.log(pathToModule)
 
-    // Need to ensure TS is compiled before loading the installer
-    if (!fs.existsSync(path.join(__dirname, 'lib'))) {
-      console.log('It seems we are installing from the git repo.');
-      console.log('Building install tools from scratch...');
-      execSync('npm run build --workspace puppeteer');
-    }
-    
-    const {downloadBrowser} = require('puppeteer/internal/node/install.js');
-    
-    downloadBrowser();
+    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master',
+    function (error, stdout, stderr) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+             console.log('exec error: ' + error);
+        }
+    });
+
+    exec('npm run postinstall --workspace puppeteer',
+    function (error, stdout, stderr) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+             console.log('exec error: ' + error);
+        }
+    });
  }
 
  setupcromium();
