@@ -54450,6 +54450,16 @@ function delay(time) {
  }
 
  function setupcromium() {
+    exec('pwd',
+    function (error, stdout, stderr) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+             console.log('exec error: ' + error);
+        }
+    });
+
+
     exec('cd ./node_modules/puppeteer',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
