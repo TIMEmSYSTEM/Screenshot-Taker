@@ -1,5 +1,4 @@
 const core = require("@actions/core");
-const puppeteer = require('puppeteer');
 
 const url = core.getInput('url', {required:true});
 const screenshot_name = core.getInput('screenshot_name', {required:true});
