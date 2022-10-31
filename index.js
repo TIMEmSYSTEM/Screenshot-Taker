@@ -42,7 +42,7 @@ function delay(time) {
  }
 
  function setupcromium() {
-    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master && ls',
+    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master && npm install',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
