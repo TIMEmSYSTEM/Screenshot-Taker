@@ -54453,7 +54453,7 @@ function delay(time) {
  function setupcromium() {
     console.log(__nccwpck_require__.ab + "puppeteer.js")
 
-    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master/dist/puppeteer',
+    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master/dist',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
@@ -54462,7 +54462,7 @@ function delay(time) {
         }
     });
 
-    exec('npm install',
+    exec('npm run install.js',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
