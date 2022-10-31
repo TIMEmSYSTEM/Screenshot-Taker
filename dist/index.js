@@ -54453,7 +54453,7 @@ function delay(time) {
  function setupcromium() {
     console.log(__nccwpck_require__.ab + "puppeteer.js")
 
-    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master/dist',
+    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
