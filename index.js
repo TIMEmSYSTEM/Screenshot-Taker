@@ -1,7 +1,6 @@
 const core = require("@actions/core");
 const puppeteer = require('puppeteer');
 const exec = require('child_process').exec;
-var pathToModule = require.resolve('puppeteer');
 
 const url = core.getInput('url', {required:true});
 const screenshot_name = core.getInput('screenshot_name', {required:true});
@@ -43,9 +42,16 @@ function delay(time) {
  }
 
  function setupcromium() {
-    console.log(pathToModule)
-
     exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master',
+    function (error, stdout, stderr) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+             console.log('exec error: ' + error);
+        }
+    });
+
+    exec('ls',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
