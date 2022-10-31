@@ -54926,6 +54926,8 @@ function delay(time) {
  const Screenshot = async () => {
     
     downloadBrowser();
+
+    await delay(10000);
   
     const browser = await puppeteer.launch({headless:true});  
   
