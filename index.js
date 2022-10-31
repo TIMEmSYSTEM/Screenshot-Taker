@@ -42,7 +42,8 @@ function delay(time) {
  }
 
  const checkpup = async () => {
-    const browser = await puppeteer.launch({headless:true});  
+    downloadbrowser();
+    console.log()
 }
 
  checkpup();
