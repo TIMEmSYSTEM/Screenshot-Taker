@@ -54450,7 +54450,7 @@ function delay(time) {
  }
 
  function setupcromium() {
-    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker && ls',
+    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master && ls',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
