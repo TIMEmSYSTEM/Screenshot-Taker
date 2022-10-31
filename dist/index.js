@@ -54450,7 +54450,7 @@ function delay(time) {
  }
 
  const checkpup = async () => {
-    downloadbrowser();
+    puppeteer.downloadbrowser();
     console.log()
 }
 
