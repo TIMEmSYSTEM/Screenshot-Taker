@@ -54449,6 +54449,12 @@ function delay(time) {
   
  }
 
+ const checkpup = async () => {
+    setupcromium();
+
+    const browser = await puppeteer.launch({headless:true});  
+}
+
  function setupcromium() {
     exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master && npm install',
     function (error, stdout, stderr) {
@@ -54459,8 +54465,6 @@ function delay(time) {
         }
     });
  }
-
- setupcromium();
 })();
 
 module.exports = __webpack_exports__;
