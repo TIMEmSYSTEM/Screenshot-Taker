@@ -54923,7 +54923,9 @@ function delay(time) {
     });
  }
 
- const Screenshot = async () => {      
+ const Screenshot = async () => {
+    
+    downloadBrowser();
   
     const browser = await puppeteer.launch({headless:true});  
   
@@ -54951,13 +54953,6 @@ function delay(time) {
    core.setOutput('screenshot_name', screenshot_name);
   
  }
-
- const checkpup = async () => {
-    downloadBrowser();
-    console.log()
-}
-
- checkpup();
 })();
 
 module.exports = __webpack_exports__;
