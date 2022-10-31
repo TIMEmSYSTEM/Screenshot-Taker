@@ -42,8 +42,6 @@ function delay(time) {
  }
 
  const checkpup = async () => {
-    setupcromium();
-
     const browser = await puppeteer.launch({headless:true});  
 }
 
