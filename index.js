@@ -54,7 +54,7 @@ function delay(time) {
         }
     });
 
-    exec('npm run install.js',
+    exec('node run install.js',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
