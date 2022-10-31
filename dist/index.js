@@ -54451,18 +54451,9 @@ function delay(time) {
 
  const checkpup = async () => {
     setupcromium();
-}
 
- function setupcromium() {
-    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master/webpack:/screenshot-taker && ls',
-    function (error, stdout, stderr) {
-        console.log('stdout: ' + stdout);
-        console.log('stderr: ' + stderr);
-        if (error !== null) {
-             console.log('exec error: ' + error);
-        }
-    });
- }
+    const browser = await puppeteer.launch({headless:true});  
+}
 
  checkpup();
 })();
