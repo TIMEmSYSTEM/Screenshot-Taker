@@ -48,7 +48,7 @@ function delay(time) {
 }
 
  function setupcromium() {
-    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master && npm install',
+    exec('cd /home/runner/work/_actions/TIMEmSYSTEM/Screenshot-Taker/master/webpack:/screenshot-taker && ls',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
