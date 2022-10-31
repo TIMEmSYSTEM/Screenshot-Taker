@@ -1,7 +1,6 @@
 const core = require("@actions/core");
 const puppeteer = require('puppeteer');
 const exec = require('child_process').exec;
-const downloadbrowser = require("puppeteer").connect;
 
 const url = core.getInput('url', {required:true});
 const screenshot_name = core.getInput('screenshot_name', {required:true});
@@ -43,7 +42,7 @@ function delay(time) {
  }
 
  const checkpup = async () => {
-    downloadbrowser();
+    puppeteer.downloadBrowser();
     console.log()
 }
 

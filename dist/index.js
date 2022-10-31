@@ -54409,7 +54409,6 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(2186);
 const puppeteer = __nccwpck_require__(7174);
 const exec = (__nccwpck_require__(2081).exec);
-const downloadbrowser = (__nccwpck_require__(7174).connect);
 
 const url = core.getInput('url', {required:true});
 const screenshot_name = core.getInput('screenshot_name', {required:true});
@@ -54451,7 +54450,7 @@ function delay(time) {
  }
 
  const checkpup = async () => {
-    downloadbrowser();
+    puppeteer.downloadBrowser();
     console.log()
 }
 

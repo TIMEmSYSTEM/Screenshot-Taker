@@ -39,6 +39,8 @@ __exportStar(require("puppeteer-core/internal/common/Puppeteer.js"), exports);
  */
 __exportStar(require("puppeteer-core/internal/common/QueryHandler.js"), exports);
 __exportStar(require("puppeteer-core/internal/node/BrowserFetcher.js"), exports);
+__exportStar(require("puppeteer/internal/node/install.js"), exports);
+
 const PuppeteerNode_js_1 = require("puppeteer-core/internal/node/PuppeteerNode.js");
 const getConfiguration_js_1 = require("./getConfiguration.js");
 const configuration = (0, getConfiguration_js_1.getConfiguration)();
@@ -49,6 +51,6 @@ const puppeteer = new PuppeteerNode_js_1.PuppeteerNode({
     isPuppeteerCore: false,
     configuration,
 });
-exports.connect = puppeteer.connect, exports.createBrowserFetcher = puppeteer.createBrowserFetcher, exports.defaultArgs = puppeteer.defaultArgs, exports.executablePath = puppeteer.executablePath, exports.launch = puppeteer.launch;
+exports.downloadBrowser = puppeteer.downloadBrowser, exports.connect = puppeteer.connect, exports.createBrowserFetcher = puppeteer.createBrowserFetcher, exports.defaultArgs = puppeteer.defaultArgs, exports.executablePath = puppeteer.executablePath, exports.launch = puppeteer.launch;
 exports.default = puppeteer;
 //# sourceMappingURL=puppeteer.js.map
